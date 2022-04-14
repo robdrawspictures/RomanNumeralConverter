@@ -100,4 +100,19 @@ public class NumeralConverter {
         return huns + subHuns;
 
     }
+
+    public String conversionManager(Integer num){
+        String convertedNum;
+        if(num > 100){
+            convertedNum = convertHuns(num);
+        }
+        else if(num > 50 && num < 100){
+            convertedNum = lessThanHundred(num);
+        }
+        else if(num < 50 && num > 10){
+            convertedNum = lessThanFifty(num);
+        }
+        else convertedNum = lessThanTen(num);
+        return convertedNum;
+    }
 }

@@ -49,4 +49,11 @@ public class NumeralConverterTest {
         assertEquals("CMXCIX", numeralConverter.convertHuns(999));
     }
 
+    @Test
+    public void canConvertAnyNum(){
+        assertEquals("IV", numeralConverter.conversionManager(4));
+        assertEquals("XXXVI", numeralConverter.conversionManager(36));
+        assertEquals("LXXXI", numeralConverter.conversionManager(81));
+        assertEquals("CMXCIX", numeralConverter.conversionManager(999));
+    }
 }
